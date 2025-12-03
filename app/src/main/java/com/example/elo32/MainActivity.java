@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setMessage("Imie: "+InpName.getText() +"\n"+
                 "Nazwisko: "+ InpSurname.getText()+"\n"+
                 "haslo: "+ InpCount.getText());
-            builder.setNegativeButton("ok",(DialogInterface.OnClickListener)(dialog, which)->{
+            builder.setNegativeButton("oki",(DialogInterface.OnClickListener)(dialog, which)->{
                 dialog.cancel();
             });
             builder.show();
