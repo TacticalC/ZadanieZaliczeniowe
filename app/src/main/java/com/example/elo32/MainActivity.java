@@ -32,5 +32,9 @@ public class MainActivity extends AppCompatActivity {
     CheckBox checkSpecial = findViewById(R.id.Special);
     Button btnGenerator = findViewById(R.id.Generator);
     Button btnAccept = findViewById(R.id.Accept);
+    public String  generate(int charNumber){
+        String password = "";
+        return password;
+    };
 
 }
