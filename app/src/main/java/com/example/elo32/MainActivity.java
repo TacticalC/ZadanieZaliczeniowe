@@ -2,6 +2,8 @@ package com.example.elo32;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,5 +24,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+    EditText InpName = findViewById(R.id.Name);
+    EditText InpSurname = findViewById(R.id.Surname);
+    EditText InpCount = findViewById(R.id.Count);
+    CheckBox checkHeight = findViewById(R.id.Height);
+    CheckBox checkNumbers = findViewById(R.id.Numbers);
+    CheckBox checkSpecial = findViewById(R.id.Special);
+    Button btnGenerator = findViewById(R.id.Generator);
+    Button btnAccept = findViewById(R.id.Accept);
 
 }
