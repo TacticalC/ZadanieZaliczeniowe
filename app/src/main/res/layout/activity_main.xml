@@ -18,11 +18,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Imie"
+        android:id="@+id/Name"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nazwisko:"
+        android:id="@+id/Surname"
         />
     <Spinner
         android:layout_width="match_parent"
@@ -36,33 +38,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ile znaków"
+        android:id="@+id/Count"
         />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Małe i wielkie litery"
         android:checked="true"
+        android:id="@+id/Height"
         />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cyfry"
+        android:id="@+id/Numbers"
         />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Znaki specjalne"
+        android:id="@+id/Special"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Generuj hasło"
         android:layout_marginLeft="200dp"
+        android:id="@+id/Generator"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Zatwierdź"
+        android:id="@+id/Accept"
         />
 
 </LinearLayout>
