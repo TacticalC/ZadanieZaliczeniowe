@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnAccept = findViewById(R.id.Accept);
     public String  generate(int charNumber){
         String password = "";
+        String low = "qwertyuiopasdfghjklzxcvbnm";
+        String high = "QWERTYUIOPASDFGHJKLZXCVBNM";
+        String number = "1234567890";
+        String special = "!@#$%^&*()_+-=";
         return password;
     };
 
