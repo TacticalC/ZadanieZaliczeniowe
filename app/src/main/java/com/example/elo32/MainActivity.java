@@ -1,5 +1,6 @@
 package com.example.elo32;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -34,6 +36,24 @@ public class MainActivity extends AppCompatActivity {
             InpCount.setText(generate(lenght));
 
         });
+        EditText InpName = findViewById(R.id.Name);
+        EditText InpSurname = findViewById(R.id.Surname);
+        Button btnAccept = findViewById(R.id.Accept);
+        btnAccept.setOnClickListener(v->{
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Dane Pracownika");
+        builder.setMessage("Imie: "+InpName.getText() +"\n"+
+                "Nazwisko: "+ InpSurname.getText()+"\n"+
+                "haslo: "+ InpCount.getText());
+            builder.setNegativeButton("ok",(DialogInterface.OnClickListener)(dialog, which)->{
+                dialog.cancel();
+            });
+            builder.show();
+        });
+
+
+
+
 
 
 
@@ -42,14 +62,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public String  generate(int charNumber){
-        EditText InpName = findViewById(R.id.Name);
-        EditText InpSurname = findViewById(R.id.Surname);
+
 
         CheckBox checkHeight = findViewById(R.id.Height);
         CheckBox checkNumbers = findViewById(R.id.Numbers);
         CheckBox checkSpecial = findViewById(R.id.Special);
 
-        Button btnAccept = findViewById(R.id.Accept);
+
         String password = "";
         String low = "qwertyuiopasdfghjklzxcvbnm";
         String high = "QWERTYUIOPASDFGHJKLZXCVBNM";
@@ -85,7 +104,15 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+
         password = sb.toString();
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("wygenerowane hasło");
+        builder.setMessage(password);
+        builder.setNegativeButton("ok",(DialogInterface.OnClickListener)(dialog, which)->{
+            dialog.cancel();
+        });
+        builder.show();
         return password;
     };
 
